@@ -53,16 +53,14 @@
   <section id="abstract">
     <h2>Abstract</h2>
     <p>
-      Surgical vision‑language models require <strong>high‑quality paired image‑text data</strong>, yet current
-      datasets derived from audio transcripts are noisy and poorly aligned.
-      We introduce a <em>five‑stage pipeline</em> that converts existing segmentation data into clean,
-      spatially &amp; temporally grounded captions by progressively adding
-      object lists, absolute and relative positions, proximity‑based interaction
-      inference, and clip‑level temporal summaries. Expert evaluation of 600
-      captions showed that <strong>95&nbsp;% were rated ≥3/5</strong>, with GPT‑4o consistently achieving the
-      highest quality. Our method provides a reliable path to create
-      large‑scale, clinically coherent data for training robust surgical VLMs, as
-      detailed in the poster below.  [oai_citation:0‡Poster.pdf](file-service://file-6nyHvP3DR7uD2oaYLXoPsP)
+     
+      General surgical understanding aims to develop models that generalize across procedures and tasks, in contrast to fully-supervised, task-specific approaches. Recent work has explored VLMs for this purpose. 
+      However, their effectiveness–particularly on tasks requiring fine-grained scene understanding–is often constrained by noisy and misaligned datasets, typically based on transcribed audio. 
+      In this paper, we propose a five-stage pipeline to construct more accurate and less noisy vision-language datasets from existing segmentation datasets. 
+      Our method applies rule-based heuristics to extract spatial, and interaction cues, which are then used to prompt a large language model (LLM) to produce naturally sound, clinically coherent captions. Evaluation by three medical experts on how well the 
+      captions met stage-specific expectation found that 95% of the generated captions scored 3 or higher on a Likert scale.
+      
+      <strong> Keywords:</strong> Vision-Language Models, Surgical Captioning, Surgical Scene Understanding
     </p>
   </section>
 
