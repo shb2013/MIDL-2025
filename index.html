@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Segmentation‑Informed Captioning – MIDL 2025 Poster</title>
+
+  <!-- ------  Basic, mobile‑first styling  ------ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --accent:#ff6600;           /* change once to recolor whole page */
+      --max-width: 900px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body{margin:0;padding:0;background:#fafafa;color:#222;line-height:1.55;}
+    header{background:var(--accent);color:#fff;padding:1.3rem 0;text-align:center;}
+    h1{margin:0;font-size:clamp(1.4rem,4vw,2rem);}
+    main{max-width:var(--max-width);margin:auto;padding:1.2rem;}
+    section{margin-bottom:2.5rem;}
+    section h2{color:var(--accent);margin-bottom:.6rem}
+
+    /* Minimal poster / video wrappers */
+    .poster-wrapper, .video-wrapper{
+      display:flex; flex-direction:column; align-items:center;
+    }
+    .poster-wrapper iframe,
+    .poster-wrapper img{
+      width:100%;max-width:var(--max-width);border:none;
+    }
+    /* shadow so white poster stands out on phones */
+    .poster-wrapper img{box-shadow:0 4px 16px rgba(0,0,0,.12);}
+
+    /*  Narrow iFrames need full width */
+    .video-wrapper iframe{
+      width:100%; aspect-ratio:16/9; border:none;
+      box-shadow:0 4px 16px rgba(0,0,0,.12);
+    }
+
+    /* Footer */
+    footer{font-size:.85rem;text-align:center;padding:1rem 0;background:#eee;color:#666;}
+    a{color:var(--accent)}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Segmentation‑Informed Captioning: A Multi‑Stage Pipeline for Surgical Vision–Language Dataset Generation</h1>
+</header>
+
+<main>
+
+  <!-- =====  ABSTRACT  ===== -->
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      Surgical vision‑language models require <strong>high‑quality paired image‑text data</strong>, yet current
+      datasets derived from audio transcripts are noisy and poorly aligned.
+      We introduce a <em>five‑stage pipeline</em> that converts existing segmentation data into clean,
+      spatially &amp; temporally grounded captions by progressively adding
+      object lists, absolute and relative positions, proximity‑based interaction
+      inference, and clip‑level temporal summaries. Expert evaluation of 600
+      captions showed that <strong>95&nbsp;% were rated ≥3/5</strong>, with GPT‑4o consistently achieving the
+      highest quality. Our method provides a reliable path to create
+      large‑scale, clinically coherent data for training robust surgical VLMs, as
+      detailed in the poster below.  [oai_citation:0‡Poster.pdf](file-service://file-6nyHvP3DR7uD2oaYLXoPsP)
+    </p>
+  </section>
+
+
+  <!-- =====  POSTER  ===== -->
+  <section id="poster">
+    <h2>Conference Poster</h2>
+
+    <!-- Option A (desktop): inline PDF viewer -->
+    <div class="poster-wrapper" style="display:none" id="pdfPoster">
+      <iframe
+        src="Poster.pdf#zoom=page-fit"
+        title="Poster PDF">
+      </iframe>
+      <p style="font-size:.9rem;opacity:.7">You can zoom or download the PDF using the built‑in toolbar.</p>
+    </div>
+
+    <!-- Option B (mobile fallback): static image -->
+    <div class="poster-wrapper" id="imgPoster">
+      <!-- Replace poster.png with an exported 150 DPI PNG of the PDF -->
+      <img src="poster.png" alt="Conference Poster">
+    </div>
+
+    <script>
+      /* Show PDF on wide screens, image on small ones */
+      const pdfDiv = document.getElementById('pdfPoster');
+      const imgDiv = document.getElementById('imgPoster');
+      function switchPoster(){
+        if(window.innerWidth > 768){
+          pdfDiv.style.display='block'; imgDiv.style.display='none';
+        }else{
+          pdfDiv.style.display='none'; imgDiv.style.display='block';
+        }
+      }
+      switchPoster(); window.addEventListener('resize', switchPoster);
+    </script>
+  </section>
+
+
+  <!-- =====  VIDEO  ===== -->
+  <section id="video">
+    <h2>Poster‑Pitch Video</h2>
+    <div class="video-wrapper">
+      <!-- Your provided embed code, stripped of fixed width/height -->
+      <iframe
+        src="https://www.youtube.com/embed/jjSKvIwqzkA?si=MDkLMZQZRkkOO6a2"
+        title="Poster video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Shidin Balakrishnan et al. · Grant&nbsp;ARG01‑0522‑230266
+</footer>
+
+</body>
+</html>
