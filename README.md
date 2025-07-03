@@ -1,1 +1,1 @@
-# MIDL-2025
+# Accepted Short Paper at MIDL-2025
